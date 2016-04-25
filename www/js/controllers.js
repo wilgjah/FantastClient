@@ -213,7 +213,7 @@ angular.module('starter')
 })
 
 .controller('MapCtrl', function($scope, $state, $cordovaGeolocation, StylistService) {
-  var options = {timeout: 10000, enableHighAccuracy: true};
+  var options = {timeout: 10000, enableHighAccuracy: true, maximumAge: 0};
  
   $cordovaGeolocation.getCurrentPosition(options).then(function(position){
  
